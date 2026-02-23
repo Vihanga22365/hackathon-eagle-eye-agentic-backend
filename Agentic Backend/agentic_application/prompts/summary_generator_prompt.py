@@ -31,7 +31,10 @@ SUMMARY_GENERATOR_INSTRUCTION = """You are the Summary Generator Agent. Your job
          "loanTypeWhenGIveToCustomerGetBack": "Secured | Non Secured",
          "reasonForLoanType": "<1-3 concise bullets> with - prefix for each bullet with newline",
          "loanRateCanGiveToCustomer": "<minRate%-maxRate%>",
-         "reasonForLoanRateRange": "<1-3 concise bullets> with - prefix for each bullet with newline"
+         "reasonForLoanRateRange": "<1-3 concise bullets> with - prefix for each bullet with newline",
+         "requestedLoanAmount": "<requestedAmount>", (If requested amount is not available, return `REQUESTED_AMOUNT_NOT_AVAILABLE`)",
+         "recommendedLoanAmount": "<minAmount-maxAmount>",
+         "reasonForLoanAmount": "<1-3 concise bullets> with - prefix for each bullet with newline"
        }
 
        example output:
@@ -41,7 +44,10 @@ SUMMARY_GENERATOR_INSTRUCTION = """You are the Summary Generator Agent. Your job
          "loanTypeWhenGIveToCustomerGetBack": "Secured",
          "reasonForLoanType": "- Collateral coverage meets policy requirements\n- Verification found valid asset ownership\n- Policy review requires security for this profile",
          "loanRateCanGiveToCustomer": "10.25%-11.00%",
-         "reasonForLoanRateRange": "- Preliminary policy rate is 10.50%\n- Market analysis suggests competitive range is 10.25%-11.00%\n- Final rate range balances competitiveness and risk"
+         "reasonForLoanRateRange": "- Preliminary policy rate is 10.50%\n- Market analysis suggests competitive range is 10.25%-11.00%\n- Final rate range balances competitiveness and risk",
+         "requestedLoanAmount": "REQUESTED_AMOUNT_NOT_AVAILABLE / $450,000",
+         "recommendedLoanAmount": "$450,000-$400,000",
+         "reasonForLoanAmount": "- Requested amount not provided in input\n- Recommended amount based on policy limits and financial analysis\n- Aligns with risk level and collateral coverage"
        }
 
   - Do NOT ask any questions.

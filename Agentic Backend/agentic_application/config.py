@@ -45,7 +45,7 @@ OPENAI_GPT_MODEL = LiteLlm(model="openai/gpt-4.1-mini")
 
 # Generate Content Configuration
 GENERATE_CONTENT_CONFIG = types.GenerateContentConfig(
-    temperature=0.2,
+    temperature=0.1,
 )
 
 # Tool Filter Configurations for Bank Loan Processing System
@@ -56,7 +56,7 @@ SUPERVISOR_AGENT_TOOLS = ['fetch_loan_details']
 
 # Verification Analyzer Agent - Document verification and fraud detection
 # No specific tools required - uses AI analysis
-VERIFICATION_ANALYZER_TOOLS = ['fetch_loan_details']
+VERIFICATION_ANALYZER_TOOLS = ['fetch_loan_details', 'web_search_tool']
 
 # Policy Reviewer Agent - Banking policy review and loan product matching
 # Uses bank and loan details RAG tools to access bank policies
