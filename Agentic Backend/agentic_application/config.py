@@ -41,7 +41,7 @@ else:
 
 
 # Model configurations
-OPENAI_GPT_MODEL = LiteLlm(model="openai/gpt-4.1-mini")
+OPENAI_GPT_MODEL = LiteLlm(model="openai/gpt-4.1")
 
 # Generate Content Configuration
 GENERATE_CONTENT_CONFIG = types.GenerateContentConfig(

@@ -32,7 +32,7 @@ steps:
       - --port=8350
       - --memory=2Gi
       - --cpu=2
-      - --min-instances=0
+      - --min-instances=1
       - --max-instances=5
       - --timeout=300
       - --allow-unauthenticated
